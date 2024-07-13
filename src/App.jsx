@@ -13,7 +13,14 @@ const App = () => {
   };
 
   const deleteUser = (id) => {
-    setUsers(users.filter((user) => user.id !== id));
+    // if(window.alert){
+    //   alert('are you sure want to delete it?')
+    //   setUsers(users.filter((user) => user.id !== id));
+    // }
+    if(window.confirm('are you sure want to delete?')){
+      setUsers(users.filter((user) => user.id !== id));
+    }
+   
   };
 
   const updateUser = (updatedUser) => {
